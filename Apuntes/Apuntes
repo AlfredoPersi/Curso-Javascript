@@ -1,0 +1,17 @@
+APUNTES JAVASCRIPT
+
+Mostrar pop up con un mensaje
+dentro del script, utilizamos "aler("mensaje");" para mostrar un mensaje
+
+Utilizar archivo externo JS
+dentro del html (preferentemente dentro del HEAD) llamamos el archivo js a travez de la etiqueta script y atributo src
+	<script type="text/javascript" src="hola_mundo.js"></script>
+
+Mostrar datos en la consola del navegador
+podemos mostrar datos harkodeados, variables, resultados de operaciones, etc
+	"console.log('lo que sea');"
+
+VARIABLES
+contenedores de datos. utilizamos la palabra "VAR" para declarar cualquier tipo de variable(int, string, etc)
+podemos concatenar varias variables utilizando "+".
+	var pais_continente = pais + " " + continente;

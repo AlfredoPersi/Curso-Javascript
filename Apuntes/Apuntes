@@ -15,3 +15,26 @@ VARIABLES
 contenedores de datos. utilizamos la palabra "VAR" para declarar cualquier tipo de variable(int, string, etc)
 podemos concatenar varias variables utilizando "+".
 	var pais_continente = pais + " " + continente;
+
+MODO ESTRICTO
+modo que nos obliga que programemos con mejores practicas y activa funcionalidades nuevas. para activarlas
+tipeamos 'use strict' al principio. Util para que nuestro codigo se adecue a los ultimos estandares.
+
+ULTIMOS ESTANDARES
+un ejemplo es que tenemos 2 formas de definir una variable: con VAR y con LET.
+Diferencia: LET: permite definir variables limitando su alcance al bloque donde se esta usando
+			VAR: permite definir variables de manera global.
+
+Constantes: variable que contiene un dato que no va a poder ser modificado nunca.
+	ej: const nombre = "valor";
+
+Tipos de variables: -enteros = 22
+					-flotante/decimal = 10.5
+					-boleano = true/false
+					-cadena de texto = "hola pepito"
+					
+Metodos:-Number = funcion que castea un numero que es una cadena de texto. Esta funcion puede convertirla en un 					numero entero, flotante o decimal. ej: console.log(Number("10.5"));
+		-String = convierte cualquier tipo de numero en una cadena de texto.
+		ej: console.log(String(10));
+		-typeof = detecta el tipo de variable que es la que vamos a usar.
+		ej: console.log(typeof "variableNumero");

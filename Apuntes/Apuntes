@@ -1,7 +1,7 @@
 APUNTES JAVASCRIPT
 
 Mostrar pop up con un mensaje
-dentro del script, utilizamos "aler("mensaje");" para mostrar un mensaje
+dentro del script, utilizamos "alert("mensaje");" para mostrar un mensaje
 
 Utilizar archivo externo JS
 dentro del html (preferentemente dentro del HEAD) llamamos el archivo js a travez de la etiqueta script y atributo src
@@ -38,3 +38,22 @@ Metodos:-Number = funcion que castea un numero que es una cadena de texto. Esta 
 		ej: console.log(String(10));
 		-typeof = detecta el tipo de variable que es la que vamos a usar.
 		ej: console.log(typeof "variableNumero");
+
+
+FIJAR PUNTO DE INTERRUPCION
+escribiendo la palabra "debugger" dentro de nuestro codigo pondremos un punto de interrupcion para poder frenar y debugguear nuestra pag. web.
+
+ALERTAS, VENTANAS DE SELECCION Y POP UP DE INGRESO DE DATOS
+dentro de nuestra pag web podemos crear pop ups para mostrar algun mensaje, pedir confirmacion, etc:
+-ALERTA (mensaje) = alert("texto a mostrar");
+-CONFIRMACION(preg de confirmacion) = confirm("texto de nuestra confirmacion"); 
+ si queremos obtener el valor de la respuesta, debemos asignar este confirm a una variable
+    var respuesta = confirm("¿Estas seguro de querer continuar?");
+-INGRESO DE DATOS = prompt("texto del popup", "valor predeterminado");
+ esta ventana nos permite ingresar algun dato y setearle un valor predeterminado en el caso de que no se complete en el segundo parametro. Podemos tomar el valor de la misma forma que con la confirmacion.
+
+ VERIFICAR QUE SEA UN NUMERO
+ dentro de una condicion, para verificar si el dato que ingresa
+ el usuario es numérico, lo hacemos con la sentencia "isNaN(Variable)". esto nos devolvera un true cuando ingresamos un caracter en un campo que espera recibir numero.
+
+

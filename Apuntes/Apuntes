@@ -56,4 +56,6 @@ dentro de nuestra pag web podemos crear pop ups para mostrar algun mensaje, pedi
  dentro de una condicion, para verificar si el dato que ingresa
  el usuario es numérico, lo hacemos con la sentencia "isNaN(Variable)". esto nos devolvera un true cuando ingresamos un caracter en un campo que espera recibir numero.
 
+FUNCIONES
+una funcion es una agrupacion reutilizable de un conjunto de instrucciones que podemos utilizar tantas veces como queramos
 

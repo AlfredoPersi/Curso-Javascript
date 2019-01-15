@@ -58,4 +58,54 @@ dentro de nuestra pag web podemos crear pop ups para mostrar algun mensaje, pedi
 
 FUNCIONES
 una funcion es una agrupacion reutilizable de un conjunto de instrucciones que podemos utilizar tantas veces como queramos
+Dentro de estas funciones podemos llamar a otras funciones si lo deseamos.
+Estas tambien pueden recibir parametros con desde su invocación.
 
+PARAMETROS REST
+si tenemos una funcion que recibe 2 parametros, y le pasamos mas de esa cantidad, al momento de mostrar, veremos que mostrara los dos primeros. Esto no es lo indicado. debemos mostrar todos los parametros. Para esto, en la declaracion de la funcion, luego de los primeros 2 parametros, creamos uno mas el cual debe iniciar con "..." y el nombre del parametro. esto hace que reciba todos los demas de forma de array.
+ ej:	function lista_frutas(fruta_1, fruta_2, ...frutas_restantes){
+ 			.....
+ 		}
+
+
+ FUNCIONES ANONIMAS
+ es una funcion que no tiene nombre y se puede guardar dentro de una variable.
+ utilizada para hacer Callback (funcion que se ejecuta dentro de otro).
+
+ FUNCIONES DE FLECHA
+ forma de definir funciones de CallBack mas prolija y corta.
+ Simplemente se escribe el parametros y =>. si lleva un parametro no es necesario
+ poner los parentecis. si son mas SI.
+ 	EJ: sumame(1, 5, dato => {....logica de funcion....});
+
+
+FUNCIONES PARA TEXTOS
+ -toString() = convierte cualquier tipo de dato en string.
+ -toUpperCase() = convierte el texto a todo en mayuscula.
+ -toLowerCase() = convierte el texto a todo en minuscula.
+ -length = me devuelve la cantidad de caracteres de un texto.
+ -concat = permite concatenar textos (util para hacerlo dentro de un bucle).
+ -indexOf("texto") = devuelve la posicion en la que encuentra la primera coincidencia
+ 					 del texto
+ -lastIndexOf("texto") = devuelve la posicion en la que encuentra la ultima 
+ 						 coincidencia del texto
+ -search("texto") = lo mismo que el indexOf.
+ -match("texto") = devuelve un array con la palabra, la posicion, el texto completo,
+ 				   y demas datos
+ 	poniendo el texto entre barras (/texto/g) nos devolvera el array con todas las coincidencias.
+ -substr(posicion, cantcaracteres) = toma los caracteres que estan desde el numero de posicion y hasta la cantidad de caracteres que se ingrese en el segundo parametro.
+ -charAt(posicion) = devuelve el caracter que esta en la posicion ingresada.
+ -startsWith("texto") = busca al inicio del string si existe el texto ingresado y 
+ 						devuelve true o false.
+ -endsWith("texto") = busca al final del string si existe el texto ingresado y 
+ 					  devuelve true o false.
+ -include("texto") = busca dentro de la cadena de textos el texto ingresado y retorna 
+ 					 true o false.
+ -replace("texto1", "texto2") = reemplaza el 1er texto en el parametro por el segundo
+ 								en una cadena de texto.
+ -slice(posInicio, posFin) = devuelve en un string todo el texto a partir de la 
+ 							 posicion marcada. Puede ponerse un fin al corte tambien.
+ -split(" ") = corta el texto en el caracter que le pasemos y lo guarda en un array. si
+ 			   le pasamos un espacio, va a separar todas las palabras y las va a 
+ 			   guardar a todas en el array.
+ -trim() = quita los espacios por delante y por detras de la cadena de caracteres

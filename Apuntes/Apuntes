@@ -108,4 +108,64 @@ FUNCIONES PARA TEXTOS
  -split(" ") = corta el texto en el caracter que le pasemos y lo guarda en un array. si
  			   le pasamos un espacio, va a separar todas las palabras y las va a 
  			   guardar a todas en el array.
- -trim() = quita los espacios por delante y por detras de la cadena de caracteres
+ -trim() = quita los espacios por delante y por detras de la cadena de caracteres.
+
+
+ PLANTILLAS
+ javascript nos permite ingresar textos grandes multilineas y demas, a traves de las plantillas. Dentro de estas plantillas podemos ingresar codigo html(h1, h3, etc) y podemos poner variables(${variable}) y mostrarlas en forma de textos. La forma de usarlo es con las comillas invertidas:
+  un ejemplo es:
+ 	var texto = `
+ 	 	<h1>Hola que tal</h1>
+ 	 	<h3>Mi nombre es: ${nombre}<h3/>
+ 	 	<h3>Mi apellido es: ${apellido}<h3/>
+ 	`;
+
+
+ARRAYS - FORMAS DE RECORRERLO
+-FOREACH: en este for debemos si o si pasar el elemento ya que va a ser cada uno de los que estan dentro del array que vamos a recorrer. Tambien podemos pasar un indice para saber en que posicion esta, y un parametro array para que lo muestre todo.
+ "array".forEach(elemento, indice, array)=>{
+	...logica...
+ }
+
+
+ARRAYS - METODOS
+ -push(elemento) = agrega un elemento al array
+ -pop(elemento) = quita un elemento del array. Si no le pasamos argumetento, borra el 
+ 				  ultimo.
+ -indexOf(elemento) = devuelve la posicion del elemento en el array.
+ -splice(indice, x) = permite borrar a partir de una posicion(indice) tantas posiciones 
+ 					  en adelante(x)
+ -join() = convierte el array en un string separados por ','.
+ -sort() = ordena el array por orden alfabético.
+ -reverse() = ordena el array al reves.
+ -find(function(elemento)){} = busca si esta el elemento que comparemos dentro de la 
+ 							 funcion. Este metodo retorna lo que buscamos si existe.
+ 							 Caso contrario retorna undefined.
+ -findIndex(function(elemento)){} = nos devolvera el indice donde se encuentra el
+ 									elemento que buscamos.
+ -some(function(elemento)){} = busca si hay elementos menor o mayor a la condicion que
+ 							   pongamos en la funcion. devuelve true o false.
+
+
+DOM - Document Object Model
+Es el arbol de etiquetas y elementos que componen una web (el body, el p, etc).
+a traves del dom, podemos modificar las etiquetas HTML, podemos seleccionar los elementos y manipularlos como queramos.
+NOTA: se recomienda importar el archivo JS al final del body, ya que si se quiere manipular un elemento de la pagina, al estar encima, se ejecuta primero el js y va a dar como que no esta definido un elemento. poniendolo al final, primero se ejecuta el HTML y el JS va a encontrar todos los elementos que vaya a usar.
+
+METODOS DEL DOM
+-getElementById("Id del elemento") = devuelve el elemento HTML.
+-getElementById("Id del elemento").innerHTML = devuelve el elemento pero si su HTML. Con
+				este innerHTML tambien podemos cambiar el contenido del elemento.
+-querySelector("#idElemento") = devuelve el elemento HTML. Con este selector podemos 
+				traer el elemento a traves del class(".NombreClass") o todos los elementos del mismo tipo ("elemento").
+-style = nos permite modificar el elemento agregando codigo CSS.
+-className = permite modificar el nombre del class del elemento.
+-getElementsByTagName("nombreTag") = devuelve en un array todos los elementos con el 
+				con el nombre del tag que pasemos.
+-elemento[x].textContent = devuelve el texto que contiene un elemento que ya traimos.
+-createElement("elemento") = crea un elemento HTML desde Javascript
+-createTextNode("string") = crea un nodo con un texto al cual podemos insertar dentro de una etiqueta HTML
+-appendChild(varNodo) = inserta el nodo que creamos antes dentro de una etiqueta para poder mostrarlo en el DOC.
+						Tambien sirve para insertar un elemento HTML dentro de otro.
+-append(elemento) = mismo que el anterior. no es necesario poner el Child al append.
+-prepend(elemento) = inserta un elemento HTML antes del elemento que queramos.

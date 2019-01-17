@@ -43,3 +43,5 @@ console.log(busqueda);
 	busqueda = texto1.split(" "); //corta el texto en el caracter que le pasemos y lo guarda en un array. si le pasamos un espacio, va a separar
 								  //todas las palabras y las va a guardar a todas en el array
 	busqueda = texto1.trim(); //quita los espacios por delante y por detras de la cadena de caracteres
+
+	console.log(busqueda);

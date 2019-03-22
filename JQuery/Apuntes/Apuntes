@@ -1,0 +1,24 @@
+JQUERY
+Jquery es una libreria de JavaScript que nos da funcionalidades costosas ya
+desarrolladas como animaciones, compatibildad, etc.
+Permite trabajar sobre los eventos de manera mas sencillas y plugins para trabajar
+mas sencillo. Reduce mucho el codigo a comparacion de JavaScript puro.
+
+DESCARGA
+Podemos obtener cualquier version googleando "jquery core". en el primer enlace
+entramos, seleccionamos la opcion "MINIFIED" de la version que queramos y copiamos
+el script.
+Para verificar si esta bien cargado, ingresamos el siguiente script y ejecutamos:
+	<script> // verificacion que jQuery esta cargado
+		$(document).ready(function(){
+			console.log("jQuery y la web cargados!")
+		})
+	</script>
+
+
+SELECTORES
+Para poder seleccionar un elemento/objeto de nuestro html, debemos usar el 
+signo $ el cual hace referencia a jQuery, y luego entre parentesis el objeto.
+ej: $(document) = traera el documento html entero.
+	$("#rojo") = traera el elemento con id "rojo". el # hace ref. al id
+	$("")

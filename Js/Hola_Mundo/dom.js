@@ -38,3 +38,24 @@ for (var v in todosLosDivs) {
 }
 
 // Conseguir elementos por su clase css
+var divsClass = document.getElementsByClassName('rojo');
+for (var div in divsClass){
+	if (divsClass[div].className == "rojo") {
+		divsClass[div].style.background = 'red';
+	}
+}
+
+
+// Consigo elemento con el QUERY SELECTOR
+var id = document.querySelector("#miCaja");
+console.log(id);
+
+var clase = document.querySelector("div.azul");
+console.log(clase);
+
+var etiqueta = document.querySelector("div");
+console.log(etiqueta);
+
+// Consigo varios elementos con QUERY SELECCTOR ALL
+var divsColores = document.querySelectorAll("div.rojo, div.azul");
+console.log(divsColores);

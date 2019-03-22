@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio DOM, Eventos y Funciones</title>
+	<script type="text/javascript" src="Ejercicio_DOM.js"></script>
+	<style>
+		.div_form{
+			width: 200px;
+			float: left;
+		}
+		.div_datos{
+			float: left;
+			width: 200px;
+			height: 200px;
+			border: double;
+			display: none;
+			padding: 5px;
+		}
+		.div_error{
+			color = red;
+
+		}
+
+	</style>
+</head>
+<body>
+	<!-- 
+		1. Formulario campos: Nombre, Apellidos y edad
+		2. Boton de enviar formulario: eventos submit
+		3. Mostrar datos por pantalla
+		4. Validacion del formulario
+
+	-->
+	<h1>Ejercicio DOM, Eventos y Funciones - Curso JS</h1>
+
+	<div class="div_form">
+		<form action="" method="POST" id="form1" onsubmit="return false;">
+		<!-- onsubmit="return false" para que no redirija a otra pagina-->
+			<label for="txtNombre">Nombre:</label><br/>
+			<input type="text" name="txtNombre" id="txtNombre"/><br/>
+			<div id="error_nom" class="div_error"></div>
+
+			<label for="txtApellido">Apellido:</label><br/>
+			<input type="text" name="txtApellido" id="txtApellido"/><br/>
+			<div id="error_ape" class="div_error"> errer</div>
+
+			<label for="txtEdad">Edad:</label><br/>
+			<input type="number" name="txtEdad" id="txtEdad"/><br/>
+			<div id="error_edad" class="div_error"></div>
+
+			<input type="submit" value="Enviar" name="btnEnviar" id="btnEnviar" />
+		</form>
+	</div>
+	<div class="div_datos">
+		<h3 style="text-align: center;">Datos del Usuario</h3>
+		<hr>
+	</div>
+
+</body>
+</html>

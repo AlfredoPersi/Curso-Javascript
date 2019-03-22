@@ -156,12 +156,15 @@ METODOS DEL DOM
 -getElementById("Id del elemento") = devuelve el elemento HTML.
 -getElementById("Id del elemento").innerHTML = devuelve el elemento pero si su HTML. Con
 				este innerHTML tambien podemos cambiar el contenido del elemento.
+-getElementsByTagName("nombreTag") = devuelve en un array todos los elementos con el nombre del tag que pasemos.
+-getElementsByClassName("class nombre") = devuelve en un array todos los elementos con el class que pasemos.
 -querySelector("#idElemento") = devuelve el elemento HTML. Con este selector podemos 
-				traer el elemento a traves del class(".NombreClass") o todos los elementos del mismo tipo ("elemento").
+				traer el elemento a traves del class(".NombreClass") o todos los elementos del mismo tipo ("elemento"). Este solo nos traera un elemento.
+-querySelectorAll ("clase/id/elemento") = devuelve un nodeList (es igual a un array) con todos los elementos que
+				estan en la web y coincidan con los id, class o tags que pasemos.
 -style = nos permite modificar el elemento agregando codigo CSS.
 -className = permite modificar el nombre del class del elemento.
--getElementsByTagName("nombreTag") = devuelve en un array todos los elementos con el 
-				con el nombre del tag que pasemos.
+
 -elemento[x].textContent = devuelve el texto que contiene un elemento que ya traimos.
 -createElement("elemento") = crea un elemento HTML desde Javascript
 -createTextNode("string") = crea un nodo con un texto al cual podemos insertar dentro de una etiqueta HTML
@@ -169,3 +172,111 @@ METODOS DEL DOM
 						Tambien sirve para insertar un elemento HTML dentro de otro.
 -append(elemento) = mismo que el anterior. no es necesario poner el Child al append.
 -prepend(elemento) = inserta un elemento HTML antes del elemento que queramos.
+
+
+BOM - Browser Object Model
+Permite acceder y modificar las propiedades de las ventanas del propio navegador. Mediante el BOM podemos redimensionar y mover la ventana del navegador, modificar el texto que se muestra en la barra de estado y muchas otras manipulaciones no relacionadas con el contenido de la página HTML.
+
+METODOS DEL BOM
+-window.innerHeight = devuelve el alto de la pantalla en px.
+-window.innerWidth = devuelve el ancho de la pantalla en px.
+-screen.width = devuelve el ancho de la pantalla en px.
+-screen.height = devuelve el alto de la pantalla en px.
+-window.location = devuelve un array con toda la info de la URL (direccion, href, etc).
+ 	 todos estos datos podemos modificarlos, por ej. cambiar el href para que nos
+	 redirija a otra pagina al llamarlo desde una funcion.
+-window.open(url) = abre una pestaña nueva en el navegador con al url ingresada. Pasando
+	los parametros ("", "width=XXX, height=XXX") nos abrira una nueva ventana con
+	las medidas ingresadas.
+
+
+EVENTOS
+son funciones que se ejecutan cada vez que suceden algo (cuando el usuario da un click, mueve el raton, redimenciona el navegador, etc.).
+
+EJEMPLOS DE EVENTOS desde HTML
+-onclick = es cuando el usuario da un click sobre el elemento.
+-ondblclick = es cuando el usuario hace doble click sobre elemento.
+
+EJEMPLOS DE EVENTOS desde JAVASCRIPT
+addEventListener("evento", funcion(){logica funcion}) = este metodo se encarga de tomar
+los eventos que se van produciendo. Antes de esto, debemos obtener el elemento
+HTML y guardarlo en una variable.
+Ejemplos: -click (al hacer click en un elemento)
+		  -mouseover (al pasar el puntero por encima de un elemento)
+		  -mouseout (al sacar de encima de un elemento el puntero)
+		  -focus (al hacer foco en un elemento)
+		  -blur (sacar el foco de un elemento)
+		  -keydown (al precionar una tecla del teclado) 
+		  -keypress (devuelve la tecla presionada)
+		  -keyup (captura el evento al soltar una tecla)
+		  -load (evento que se lanza cuando ya se cargan todos los elementos HTML. este evento se pone al principio del archivo js. 
+		  	ej: window.addEventListener('load', function(){.......});)
+
+
+TIMERS
+nos permiten ejecutar una logica cada cierta cantidad de tiempo.
+-setInterval(function(){...}, tiempo) = con el hacemos que se ejecute la logica dentro
+			de la funcion cada sierto intevalo de tiempo. Este se mide en milisegundos.
+-setTimeOut(function(){...}, tiempo) = se va a ejecutar solo una vez en el tiempo que
+			le indiquemos.
+
+
+THIS
+El operador THIS sirve para hacer referencia al objeto con el que estamos interactuando. por ejemplo en un 
+evento, si damos click a un boton y queremos que cambien alguna propiedad o estilo, no es necesario hacer
+un querySelector para llamar al boton. Utilizando THIS podemos llamarlo mas facilmente.
+
+
+JSON
+nos permite crear objetos de manera sencilla. Esta clase de obtejos son array asociativos y nos permite estructurar los datos.
+METODOS:
+-JSON.stringify("objeto") = convierte un objeto json en un objeto string de json.
+		Hay que utilizarlo cada vez que se desee enviar el objeto o guardarlo en el LS.
+-JSON.parse("objeto") = convierte un objeto string de json a un objeto json.
+		Hay que utilizarlo luego de recuperar un objeto string de JSON para poder tratarlo.
+
+LOCAL STORAGE
+es una forma de almacenar informacion dentro del navegador y que persista mientras voy navegando en la pagina. Es como una especie de sesion.
+METODOS:
+ -localStorage.setItem("titulo", "valor") = guarda un dato normal (string).
+ -localStorage.getItem("titulo") = recupera el valor que contenga el titulo.
+
+ FETCH
+ Metodo que nos permite hacer peticiones a Ajax.
+ Una peticion Ajax es una llamada a un servicio REST.
+ Con este metodo podemos obtener datos de un backend (servicio) y mostrarla en nuestra pagina web.
+ Tambien podemos encadenar varias promesas(FETCH) seguidas y asi llamar a varios servicios a la vez.
+
+ PROMESAS
+ En js podemos crear nuestra propia promesa para obtenerla con FETCH y utilizarla para mostrar los datos que devuelve.
+
+ CAPTURAR ERRORES EN PROMESAS
+ Para poder capturar un error o excepsion en un fetch, debemos agregar un Catch.
+ Con este podemos realizar una funcion de callback y dentro que muestre el error
+ por consola y podemos escribir un mensaje.
+
+ CAPTURAR ERRORES EN EL CODIGO
+ Se puede usar el Try-Catch, el cual se encargara de tomar los errores y 
+ exsepciones. De esta forma podemos controlar que queremos que haga cuando suceda
+ un error.
+
+ FECHAS
+ Para poder usar la fecha debemos usar el new Date();
+ Con esto obtendremos la fecha actual y podremos usar varios metodos:
+ ej:
+ -getFullYear() = devuelve el año actual
+ -getMonth() = devuelve el mes actual
+ -getDate() = devuelve el dia actual
+ -getHours() = devuelve la hora actual
+ -getMinutes() = devuelve el minuto actual
+
+ FUNCIONES MATEMATICAS
+ Javascript tiene muchos metodos que podemos utilizar a traves de Math.
+ Estos los podemos encontrar en google poniendo "Javascript Math".
+ EJ mas usados:
+ -Math.max = devuelve el maximo en un array.
+ -Math.min = devuelve el minimo en un array.
+ -Math.random = devuelve 0 o 1
+ -Math.ceil = redondea un numero decimal
+
+ 

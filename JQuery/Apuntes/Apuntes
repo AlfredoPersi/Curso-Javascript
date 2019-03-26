@@ -21,4 +21,123 @@ Para poder seleccionar un elemento/objeto de nuestro html, debemos usar el
 signo $ el cual hace referencia a jQuery, y luego entre parentesis el objeto.
 ej: $(document) = traera el documento html entero.
 	$("#rojo") = traera el elemento con id "rojo". el # hace ref. al id
-	$("")
+	$(".clase") =traera el elemento con class "clase". el . hace referencia al class
+	$('[atributo="xxxxxx"]') = traera el elemento por su atributo
+
+AGREGAR CLASE A UN ELEMENTO CON JQUERY
+Si tenemos un estilo declarado, podemos agregarselo a un elemento cuando ocurra un
+evento. Para hacer eso primero debemos seleccionar el elemento, nombrar el evento y
+dentro de la funcion de este evento agregar el estilo: 
+	$("#IdElemento").click(function(){
+		$(this).addClass("estilo");
+	});
+
+QUITAR CLASE A UN ELEMENTO CON JQUERY
+Para sacar una clase a un elemento, debemos seleccionarlo, y utilizar el removeClass:
+	$("#IdElemento").removeClass("nombreEstilo");
+
+VERIFICAR SI UN ELEMENTO TIENE CLASE CON JQUERY
+Se puede verificar si un elemento tiene estilo o clase con el mentodo hasClass:
+	$("#IdElemento").hasClass("nombreEstilo");
+
+
+METODO FIND
+util para encontrar elementos cuando la pagina es muy grande. El metodo FIND
+recorre todo el documento o elemento que le digamos y devuelve todas las 
+coincidencias. 
+Ejemplo: encontrar los elementos dentro del div "caja" que tenga la clase 
+".resaltado"
+	$("#caja").find(".resaltado");
+
+METODO PARENT
+sirve para ubicarse un nivel arriba de donde estamos posicionados. Por ejemplo, si 
+estamos parados en un <li>, al usar el parent subiremos al <ul>. y si lo volvemos a
+usar subimos al <div> que lo contenga.
+	$("#li").eq(0).parent().parent().find("[title='google']");
+
+METODO SHOW()
+En el caso que tengamos un elemento html que tenga un estilo de display = none, el
+metodo show de jQuery nos permitira mostrarlo. es lo mismo si usamos el 
+display = true.
+
+METODO HIDE()
+Oculta un elemento html
+
+METODO VAL()
+este metodo nos va a tomar el valor que tenemos dentro de nuestra input. De esta
+forma podemos utilizarlo y mostrarlo en algun otro campo, etc.
+
+
+EVENTOS
+ejemplos:
+-MouseOver = pasar el mouse por encima
+-MouseOut = sacar el mouse de encima
+-Hover = combinacion entre MouseOver y MouseOut. Lleva 2 funciones, uno para cada
+una
+-Click = al dar un click en el elemento
+-Dblclick = al dar dos click en el elemento
+-Focus = al posicionarse en el input o elemento
+-Blur = al salir del input o elemento
+-Mousedown = al estar presionando el boton del mouse
+-Mouseup = al soltar el boton del mouse
+-Mousemove = toma las coordenadas X e Y del puntero
+
+METODO EACH
+este metodo es un bucle que sirve para recorrer una lista. es util si queremos
+obtener por ejemplo, todos los <li>. Con el metodo each podemos recorrer uno por
+uno.
+
+METODO ATTR
+sirve para obtener el valor de un atributo de un elemento HTML, por ejemplo,
+para obtener el valor del HREF en un link. Con este metodo tambien podemos agregar 
+un atributo a nuestro elemento:
+	$("#link").attr("target", "_blank");
+
+METODO REMOVEATTR
+nos permite borrar un atributo de un elemento
+
+EFECTOS jQUERY
+-show() = muestra un elemento. Dentro podemos seleccionar con que velocidad haga
+el efecto con 'slow', 'normal', 'fast'.
+-hide() = oculta un elemento. Dentro podemos seleccionar con que velocidad haga
+el efecto con 'slow', 'normal', 'fast'.
+-fadeIn() = igual que el show pero con un efecto de fundido. Podemos setear la 
+velocidad tambien.
+-fadeOut() = igual que el hide pero con un efecto de fundido. Podemos setear la 
+velocidad tambien.
+-slideUp() = igual que el show con efecto desplegable. Podemos setear la 
+velocidad tambien.
+-slideDown() = igual que el hide con efecto desplegable. Podemos setear la 
+velocidad tambien.
+-fadeTo() = oculta y muestra un elemento. Recibe dos parametros. el primero es
+para la velocidad, y el segundo es para el nivel de opacidad: 0 = oculto y 
+1 = mostrado. Esto nos permite pasar niveles de opacidad intermedias como 0,2 para que parezca que esta desabilitado.
+-toggle() = hace que un boton se convierta en un toggle para mostrar y desaparecer
+un elemento. Podemos setear la velocidad.
+-fadeToggle() = igual que el toggle pero con efecto de fundido
+-slideToggle() = igual que el toggle pero con un efecto desplegable
+
+ANIMACIONES
+podemos hacer animaciones con jQuery utilizando el metodo animate(). Dentro de
+este metodo, nosotros le pasamos propiedades css en un JSON como primer parametro
+y con que velocidad queremos que lo haga.
+ej: 
+	$("#IdElemto").click(function(){
+		caja.animate({marginLeft: '500px'}, 'slow');
+	})
+
+Podemos concatenar varias animaciones para que se ejecuten al final la anterior, volviendo a llamar al
+metodo .animate() y asignandole mas propiedades css.
+
+FUNCIONES CALLBACK EN ANIMACIONES
+En cada metodo de animacion, podemos agregar otro parametro que es de funcion
+callback. Esto nos permite ingresar logica dentro para que sea ejecutada una vez
+termine de ejecutarse la animacion. si no lo hacemos de esta forma y lo ponemos
+seguido a la animacion, nuestra logica se ejecutara a la par que nuestra animacion.
+
+AJAX
+es una tecnologia que nos permite hacer peticiones asincronas a un servidor y 
+recoger datos sin necesidad de actualizar la pagina entera, sino que actualiza solo
+una parte de la pantalla.
+Dentro de Ajax, tenemos varios metodos:
+-load() = nos permite traer un documento HTML entero o hacer una peticion ajax por GET e incrustar el resultado dentro de un div u otro elemento en pantalla.

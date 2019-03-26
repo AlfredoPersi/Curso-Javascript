@@ -9,13 +9,37 @@
 	  crossorigin="anonymous">
 	</script>
 	<script type="text/javascript" src="js/Selectores.js"></script>
-	
+	<style>
+		.zebra{
+			border: 5px dashed black;
+		}
+		.grande{
+			font-size: 20px;
+		}
+		.resaltado{
+			border-bottom: 2px solid green;
+		}
+	</style>
 
 </head>
 <body>
 	<h1>Aprendiendo jQuery</h1>
-	<p id="rojo">Ejercicios de jQ	</p>
-	<p id="azul">parrafo azul</p>
-	<p id="verde">parrafo verde</p>
+	<ul>
+		<li><a href="https://www.google.com" title="Google">Ir a Google</a></li>
+		<li><a href="https://www.youtube.com" title="Youtube">Ir a Youtube</a></li>
+	</ul>
+	<p id="rojo" class="zebra">Ejercicios de jQ	</p>
+	<p id="azul" class="sin_borde">parrafo azul</p>
+	<p id="verde" class="zebra">parrafo verde</p>
+	<p class="sin_borde">parrafo blanco</p>
+
+	<div id="caja">
+		<p>Hola soy una caja</p>
+		<ul>
+			<li>Elemnto 1</li>
+			<li class="resaltado">Elemento 2</li>
+		</ul>
+		<span class="resaltado">Soy un span</span>
+	</div>
 </body>
 </html>

@@ -141,3 +141,7 @@ recoger datos sin necesidad de actualizar la pagina entera, sino que actualiza s
 una parte de la pantalla.
 Dentro de Ajax, tenemos varios metodos:
 -load() = nos permite traer un documento HTML entero o hacer una peticion ajax por GET e incrustar el resultado dentro de un div u otro elemento en pantalla.
+
+METODOS:
+-GET = $.get("uri de servicio", {json con param. si queremos}, function(responsive){.....})
+-POST
